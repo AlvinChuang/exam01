@@ -5,8 +5,8 @@ import time
 
 Fs = 128.0;  # sampling rate
 Ts = 12.8/Fs; # sampling interval
-t = np.arange(0,1,Ts) # time vector; create Fs samples between 0 and 1.0 sec.
-y = np.arange(0,1,Ts) # signal vector; create Fs samples
+t = np.arange(0,12.8,Ts) # time vector; create Fs samples between 0 and 1.0 sec.
+y = np.arange(0,12.8,Ts) # signal vector; create Fs samples
 
 n = len(y) # length of the signal
 k = np.arange(n)
@@ -22,7 +22,7 @@ for x in range(0, int(Fs)):
     y[x] = float(line)
 
 
-fig, ax = plt.subplots(1, 1)
+fig, ax = plt.subplots(2, 1)
 ax[0].plot(t,y)
 ax[0].set_xlabel('Time')
 ax[0].set_ylabel('Amplitude')
